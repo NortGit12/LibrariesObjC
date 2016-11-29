@@ -12,6 +12,7 @@
 		1F371E841DEE297A00199986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F371E821DEE297A00199986 /* Main.storyboard */; };
 		1F371E861DEE297A00199986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F371E851DEE297A00199986 /* Assets.xcassets */; };
 		1F371E891DEE297A00199986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F371E871DEE297A00199986 /* LaunchScreen.storyboard */; };
+		1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E931DEE2AF600199986 /* OJCLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		1F371E851DEE297A00199986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F371E881DEE297A00199986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F371E8A1DEE297A00199986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F371E921DEE2AF600199986 /* OJCLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCLibrary.h; sourceTree = "<group>"; };
+		1F371E931DEE2AF600199986 /* OJCLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCLibrary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			children = (
 				1F371E7C1DEE297A00199986 /* AppDelegate.h */,
 				1F371E7D1DEE297A00199986 /* AppDelegate.m */,
+				1F371E951DEE2AFC00199986 /* Model */,
 				1F371E901DEE298A00199986 /* Resources */,
 				1F371E791DEE297A00199986 /* Supporting Files */,
 			);
@@ -88,6 +92,15 @@
 				1F371E821DEE297A00199986 /* Main.storyboard */,
 			);
 			name = Storybords;
+			sourceTree = "<group>";
+		};
+		1F371E951DEE2AFC00199986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F371E921DEE2AF600199986 /* OJCLibrary.h */,
+				1F371E931DEE2AF600199986 /* OJCLibrary.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F371E7E1DEE297A00199986 /* AppDelegate.m in Sources */,
+				1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */,
 				1F371E7B1DEE297A00199986 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
