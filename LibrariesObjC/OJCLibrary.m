@@ -14,17 +14,21 @@
 # pragma mark - Initializers
 // ==================================================
 
-- (instancetype)initWithName:(NSString *)name homepageURL:(NSString *)homepageURL language:(NSString *)language numberOfStars:(NSNumber *)numberOfStars andSummary:(NSString *)summary
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     
-    self = [super init];
+    self = [self init];
     if (self) {
         
-        _name = name;
-        _homepageURL = homepageURL;
-        _language = language;
-        _numberOfStars = numberOfStars;
-        _summary = summary;
+        NSString *homepageURLString = dictionary[@"homepage"];
+        if (homepageURLString) {
+            _homepageURL = [NSURL URLWithString:homepageURLString];
+        }
+        
+        _language = dictionary[@"language"];
+        _name = dictionary[@"name"];
+        _numberOfStars = [dictionary[@"stars"] unsignedIntegerValue];
+        _summary = dictionary[@"summary"];
     }
     
     return self;
