@@ -13,6 +13,7 @@
 		1F371E861DEE297A00199986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F371E851DEE297A00199986 /* Assets.xcassets */; };
 		1F371E891DEE297A00199986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F371E871DEE297A00199986 /* LaunchScreen.storyboard */; };
 		1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E931DEE2AF600199986 /* OJCLibrary.m */; };
+		1F371E981DEE2EA300199986 /* OJCLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		1F371E8A1DEE297A00199986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F371E921DEE2AF600199986 /* OJCLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCLibrary.h; sourceTree = "<group>"; };
 		1F371E931DEE2AF600199986 /* OJCLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCLibrary.m; sourceTree = "<group>"; };
+		1F371E961DEE2EA300199986 /* OJCLibrariesNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCLibrariesNetworkController.h; sourceTree = "<group>"; };
+		1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCLibrariesNetworkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 				1F371E7C1DEE297A00199986 /* AppDelegate.h */,
 				1F371E7D1DEE297A00199986 /* AppDelegate.m */,
 				1F371E951DEE2AFC00199986 /* Model */,
+				1F371E991DEE2EA800199986 /* OtherController */,
 				1F371E901DEE298A00199986 /* Resources */,
 				1F371E791DEE297A00199986 /* Supporting Files */,
 			);
@@ -101,6 +105,15 @@
 				1F371E931DEE2AF600199986 /* OJCLibrary.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1F371E991DEE2EA800199986 /* OtherController */ = {
+			isa = PBXGroup;
+			children = (
+				1F371E961DEE2EA300199986 /* OJCLibrariesNetworkController.h */,
+				1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */,
+			);
+			name = OtherController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F371E7E1DEE297A00199986 /* AppDelegate.m in Sources */,
+				1F371E981DEE2EA300199986 /* OJCLibrariesNetworkController.m in Sources */,
 				1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */,
 				1F371E7B1DEE297A00199986 /* main.m in Sources */,
 			);
