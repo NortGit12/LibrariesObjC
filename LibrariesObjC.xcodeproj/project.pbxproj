@@ -14,6 +14,7 @@
 		1F371E891DEE297A00199986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F371E871DEE297A00199986 /* LaunchScreen.storyboard */; };
 		1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E931DEE2AF600199986 /* OJCLibrary.m */; };
 		1F371E981DEE2EA300199986 /* OJCLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */; };
+		1F371E9C1DEE43AB00199986 /* OJCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E9B1DEE43AB00199986 /* OJCSearchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		1F371E931DEE2AF600199986 /* OJCLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCLibrary.m; sourceTree = "<group>"; };
 		1F371E961DEE2EA300199986 /* OJCLibrariesNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCLibrariesNetworkController.h; sourceTree = "<group>"; };
 		1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCLibrariesNetworkController.m; sourceTree = "<group>"; };
+		1F371E9A1DEE43AB00199986 /* OJCSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCSearchController.h; sourceTree = "<group>"; };
+		1F371E9B1DEE43AB00199986 /* OJCSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCSearchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 			children = (
 				1F371E961DEE2EA300199986 /* OJCLibrariesNetworkController.h */,
 				1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */,
+				1F371E9A1DEE43AB00199986 /* OJCSearchController.h */,
+				1F371E9B1DEE43AB00199986 /* OJCSearchController.m */,
 			);
 			name = OtherController;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F371E7E1DEE297A00199986 /* AppDelegate.m in Sources */,
+				1F371E9C1DEE43AB00199986 /* OJCSearchController.m in Sources */,
 				1F371E981DEE2EA300199986 /* OJCLibrariesNetworkController.m in Sources */,
 				1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */,
 				1F371E7B1DEE297A00199986 /* main.m in Sources */,

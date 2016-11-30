@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "OJCLibrariesNetworkController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    OJCLibrariesNetworkController *networkController = [OJCLibrariesNetworkController shared];
+//    [networkController fetchResultsForSearchTerm:@"AFNetworking" completion:^(NSData *jsonData, NSError *error) {
+//                                                      
+//        if (error) {
+//            
+//            NSLog(@"Error getting the search results");
+//            return;
+//        }
+//        
+//        NSError *localError = nil;
+//        
+//        
+//        
+//        NSArray *dictionaries = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:error];
+//        if(!dictionaries) { return nil; }
+//        
+//        NSMutableArray *libraries = [NSMutableArray array];
+//        
+//        
+//        
+//        
+//        NSArray *results = [self librar];
+//        
+//        
+//        if (!results) {
+//            
+//            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//            NSLog(@"Error parsing JSON for search %@: %@", jsonString, error);
+//        }
+//        
+//        NSLog(@"\nResults:\n%@", results);
+//                                                      
+//    }];
+    
     return YES;
 }
 

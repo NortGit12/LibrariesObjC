@@ -14,19 +14,27 @@
 # pragma mark - Methods
 // ==================================================
 
-+ (NSURL *)baseURL
++ (NSString *)apiKey
 {
     
-    return [NSURL URLWithString:@"https://libraries.io/"];
+    static NSString *apiKey = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        NSURL *apiKeysURL = [[NSBundle mainBundle] URLForResource:@"APIKeys" withExtension:@"plist"];
+        if (!apiKeysURL) {
+            NSLog(@"Error! APIKeys file not found!");
+            return;
+        }
+        
+        NSDictionary *apiKeys = [[NSDictionary alloc] initWithContentsOfURL:apiKeysURL];
+        apiKey = apiKeys[@"LibrariesAPIKey"];
+    });
+    
+    return apiKey;
 }
 
-- (void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void(^)(NSData *jsonData, NSError *error))completion
-{
-    
-    
-}
-
-- (NSURL *)searchURLForSearchTerm:(NSString *)searchTerm
+- (NSURL *)apiURLForSearchTerm:(NSString *)searchTerm
 {
     
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:[[self class] baseURL] resolvingAgainstBaseURL:YES];
@@ -38,6 +46,25 @@
     urlComponents.queryItems = @[search, apiKey];
     
     return urlComponents.URL;
+}
+
++ (NSURL *)baseURL
+{
+    
+    return [NSURL URLWithString:@"https://libraries.io/"];
+}
+
+- (void)fetchResultsForSearchTerm:(NSString *)searchTerm
+                       completion:(void(^)(NSData *jsonData, NSError *error))completion
+{
+    
+    NSURL *searchURL = [self apiURLForSearchTerm:searchTerm];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        completion(data, error);
+    }];
+    
+    [task resume];
 }
 
 + (OJCLibrariesNetworkController *)shared

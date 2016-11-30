@@ -16,6 +16,7 @@
 
 + (OJCLibrariesNetworkController *)shared;
 
-- (void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void(^)(NSData *jsonData, NSError *error))completion;
+- (void)fetchResultsForSearchTerm:(NSString *)searchTerm
+                       completion:(void(^)(NSData *jsonData, NSError *error))completion;
 
 @end
