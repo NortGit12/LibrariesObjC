@@ -8,13 +8,14 @@
 
 #import "OJCMainViewController.h"
 #import "OJCSearchController.h"
+#import "OJCLibraryDetailViewController.h"
 #import "OJCLibrary.h"
 
 @interface OJCMainViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 // Outlets
-@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) OJCSearchController *searchController;
 
@@ -32,7 +33,7 @@
     self.searchController = [[OJCSearchController alloc] init];
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc addObserver:self selector:@selector(searchResultsDidUpdate:) name:DMNSearchControllerResultsDidUpdateNotification object:nil];
+    [nc addObserver:self selector:@selector(searchResultsDidUpdate:) name:OJCSearchControllerResultsDidUpdateNotification object:nil];
 }
 
 // ==================================================
@@ -72,16 +73,6 @@
     return cell;
 }
 
-// ==================================================
-# pragma mark - Methods
-// ==================================================
-
-- (void)searchResultsDidUpdate:(NSNotification *)notification
-{
-    
-    [self.tableView reloadData];
-}
-
 /*
 #pragma mark - Navigation
 
@@ -91,6 +82,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Notifications
+
+- (void)searchResultsDidUpdate:(NSNotification *)notification
+{
+    [self.tableView reloadData];
+}
 
 @end
 

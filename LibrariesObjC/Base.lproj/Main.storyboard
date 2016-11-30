@@ -83,7 +83,7 @@
         <!--Detail-->
         <scene sceneID="KkU-f8-TjY">
             <objects>
-                <viewController id="1PB-oW-fZ7" sceneMemberID="viewController">
+                <viewController id="1PB-oW-fZ7" customClass="OJCLibraryDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7m4-69-aoD"/>
                         <viewControllerLayoutGuide type="bottom" id="CL4-rF-zdH"/>

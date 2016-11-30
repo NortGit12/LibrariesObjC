@@ -10,7 +10,7 @@
 
 @interface OJCSearchController : NSObject
 
-extern NSString * const DMNSearchControllerResultsDidUpdateNotification;
+extern NSString * const OJCSearchControllerResultsDidUpdateNotification;
 
 // ==================================================
 # pragma mark - _Properties 

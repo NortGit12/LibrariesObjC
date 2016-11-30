@@ -16,6 +16,7 @@
 		1F371E981DEE2EA300199986 /* OJCLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E971DEE2EA300199986 /* OJCLibrariesNetworkController.m */; };
 		1F371E9C1DEE43AB00199986 /* OJCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F371E9B1DEE43AB00199986 /* OJCSearchController.m */; };
 		1F51A59F1DEF882A00E1322F /* OJCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51A59E1DEF882A00E1322F /* OJCMainViewController.m */; };
+		1F51A5A31DEF8F3500E1322F /* OJCLibraryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51A5A21DEF8F3500E1322F /* OJCLibraryDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		1F371E9B1DEE43AB00199986 /* OJCSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCSearchController.m; sourceTree = "<group>"; };
 		1F51A59D1DEF882A00E1322F /* OJCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCMainViewController.h; sourceTree = "<group>"; };
 		1F51A59E1DEF882A00E1322F /* OJCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCMainViewController.m; sourceTree = "<group>"; };
+		1F51A5A11DEF8F3500E1322F /* OJCLibraryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJCLibraryDetailViewController.h; sourceTree = "<group>"; };
+		1F51A5A21DEF8F3500E1322F /* OJCLibraryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJCLibraryDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 		1F51A5A01DEF882F00E1322F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1F51A5A11DEF8F3500E1322F /* OJCLibraryDetailViewController.h */,
+				1F51A5A21DEF8F3500E1322F /* OJCLibraryDetailViewController.m */,
 				1F51A59D1DEF882A00E1322F /* OJCMainViewController.h */,
 				1F51A59E1DEF882A00E1322F /* OJCMainViewController.m */,
 			);
@@ -209,6 +214,7 @@
 				1F51A59F1DEF882A00E1322F /* OJCMainViewController.m in Sources */,
 				1F371E7E1DEE297A00199986 /* AppDelegate.m in Sources */,
 				1F371E9C1DEE43AB00199986 /* OJCSearchController.m in Sources */,
+				1F51A5A31DEF8F3500E1322F /* OJCLibraryDetailViewController.m in Sources */,
 				1F371E981DEE2EA300199986 /* OJCLibrariesNetworkController.m in Sources */,
 				1F371E941DEE2AF600199986 /* OJCLibrary.m in Sources */,
 				1F371E7B1DEE297A00199986 /* main.m in Sources */,
