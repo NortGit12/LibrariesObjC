@@ -73,17 +73,31 @@
     return cell;
 }
 
-/*
-#pragma mark - Navigation
+// ==================================================
+# pragma mark - Navigation
+// ==================================================
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    // How are we getting there?
+    
+    if ([[segue identifier] isEqualToString:@"cellToDetailSegue"]) {
+        
+        // Where are we going?
+        
+        OJCLibraryDetailViewController *detailViewController = [[OJCLibraryDetailViewController alloc] init];
+        
+        // Have we packed?
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        OJCLibrary *library = self.searchController.searchResults[indexPath.row];
+        detailViewController.library = library;
+    }
 }
-*/
 
-#pragma mark - Notifications
+
+// ==================================================
+# pragma mark - Notifications
+// ==================================================
 
 - (void)searchResultsDidUpdate:(NSNotification *)notification
 {

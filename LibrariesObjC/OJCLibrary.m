@@ -21,13 +21,26 @@
     if (self) {
         
         NSString *homepageURLString = dictionary[@"homepage"];
-        if (homepageURLString) {
-            _homepageURL = [NSURL URLWithString:homepageURLString];
+        if (!homepageURLString || ![homepageURLString isKindOfClass:[NSString class]]) {
+            
+            homepageURLString = [[NSURL URLWithString:@"none"] absoluteString];
         }
+        _homepageURL = [NSURL URLWithString:homepageURLString];
         
         _language = dictionary[@"language"];
         _name = dictionary[@"name"];
-        _numberOfStars = [dictionary[@"stars"] unsignedIntegerValue];
+        
+        NSString *numberOfStarsString = dictionary[@"stars"];
+        if (!numberOfStarsString || ![numberOfStarsString isKindOfClass:[NSString class]]) {
+            
+            numberOfStarsString = @"0";
+        }
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+        NSNumber *numberOfStarsNumber = [numberFormatter numberFromString:numberOfStarsString];
+        NSUInteger numberOfStars = (NSUInteger)numberOfStarsNumber;
+        _numberOfStars = &numberOfStars;
+        
         _summary = dictionary[@"summary"];
     }
     

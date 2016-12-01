@@ -14,7 +14,7 @@
 # pragma mark - _Properties
 // ==================================================
 
-@property (nonatomic, readonly) NSString *homepageURL;
+@property (nonatomic, readonly) NSURL *homepageURL;
 @property (nonatomic, readonly) NSString *language;
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSUInteger *numberOfStars;
@@ -25,7 +25,5 @@
 // ==================================================
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
-- (instancetype)initWithName:(NSString *)name homepageURL:(NSString *)homepageURL language:(NSString *)language numberOfStars:(NSNumber *)numberOfStars andSummary:(NSString *)summary;
 
 @end

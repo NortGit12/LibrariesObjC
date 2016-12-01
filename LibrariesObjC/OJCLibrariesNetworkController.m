@@ -21,7 +21,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        NSURL *apiKeysURL = [[NSBundle mainBundle] URLForResource:@"APIKeys" withExtension:@"plist"];
+        NSURL *apiKeysURL = [[NSBundle mainBundle] URLForResource:@"Info" withExtension:@"plist"];
         if (!apiKeysURL) {
             NSLog(@"Error! APIKeys file not found!");
             return;

@@ -17,8 +17,6 @@
 @property (nonatomic, strong) UILabel *homepageLabel;
 @property (nonatomic, strong) UILabel *summaryLabel;
 
-@property (nonatomic, strong) OJCLibrary *library; 
-
 @end
 
 @implementation OJCLibraryDetailViewController
@@ -39,7 +37,7 @@
 
 - (void)setLibrary:(OJCLibrary *)library
 {
-    if (library != library) {
+    if (library != _library) {
         
         _library = library;
         [self updateViews];
@@ -49,21 +47,17 @@
 - (void)updateViews
 {
     
+    if (!self.isViewLoaded) { return; }
+    
+    NSDictionary *linkAttributes = @{NSLinkAttributeName : self.library.homepageURL};
+    NSAttributedString *linkString = [[NSAttributedString alloc] initWithString:[self.library.homepageURL absoluteString] attributes:linkAttributes];
+    self.homepageLabel.attributedText = linkString;
+    
     self.languageLabel.text = self.library.language;
     
-    /*
-     self.numberOfStarsLabel.text = [NSString stringWithFormat:@"%@ Stars", @(self.library.numberOfStars)];
-     NSDictionary *linkAttributes = @{NSLinkAttributeName : self.library.homepageURL};
-     NSAttributedString *linkString = [[NSAttributedString alloc] initWithString:[self.library.homepageURL absoluteString]
-     attributes:linkAttributes];
-     self.homepageLabel.attributedText = linkString;
-     self.summaryLabel.text = self.library.summary;
-     */
+    NSString *numberOfStarsString = [NSString stringWithFormat:@"%tu", self.library.numberOfStars];
+    self.numberOfStarsLabel.text = [NSString stringWithFormat:@"%@ Stars", numberOfStarsString];
     
-    self.numberOfStarsLabel.text = [NSString stringWithFormat:@"%@ stars", @(self.library.numberOfStars)];
-    NSDictionary *linkAttributes = @{NSLinkAttributeName : self.library.homepageURL};
-    NSAttributedString *linkString  [[NSAttributedString alloc] initWithString:[self.library.homepageURL absoluteString] attributes:linkAttributes];
-    self.homepageLabel.attributedText = linkString;
     self.summaryLabel.text = self.library.summary;
 }
 
