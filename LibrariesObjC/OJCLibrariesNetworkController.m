@@ -38,7 +38,7 @@
 {
     
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:[[self class] baseURL] resolvingAgainstBaseURL:YES];
-    urlComponents.path = @"api/search";
+    urlComponents.path = @"/api/search";
     
     NSURLQueryItem *search = [NSURLQueryItem queryItemWithName:@"q" value:searchTerm];
     NSURLQueryItem *apiKey = [NSURLQueryItem queryItemWithName:@"api_key" value:[[self class] apiKey]];

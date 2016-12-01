@@ -23,11 +23,24 @@
         NSString *homepageURLString = dictionary[@"homepage"];
         if (!homepageURLString || ![homepageURLString isKindOfClass:[NSString class]]) {
             
-            homepageURLString = [[NSURL URLWithString:@"none"] absoluteString];
+            homepageURLString = @"none";
+            _homepageURL = [NSURL URLWithString:@"none"];
+            
+        } else {
+            
+            _homepageURL = [NSURL URLWithString:homepageURLString];
         }
-        _homepageURL = [NSURL URLWithString:homepageURLString];
+//        _homepageURL = [NSURL URLWithString:homepageURLString];
         
-        _language = dictionary[@"language"];
+        NSString *languageString = dictionary[@"language"];
+        if(!languageString || ![languageString isKindOfClass:[NSString class]]) {
+            
+            languageString = @"unknown";
+        }
+//        _language = dictionary[@"language"];
+        _language = languageString;
+        
+        
         _name = dictionary[@"name"];
         
         NSString *numberOfStarsString = dictionary[@"stars"];

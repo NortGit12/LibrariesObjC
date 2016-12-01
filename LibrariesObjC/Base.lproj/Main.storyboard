@@ -61,6 +61,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dVj-dd-5XO" id="Ncq-8d-6IW"/>
+                                    <outlet property="delegate" destination="dVj-dd-5XO" id="exQ-Ym-vmz"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,6 +79,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Libraries" id="bCe-Pi-7So"/>
+                    <connections>
+                        <outlet property="searchBar" destination="wT8-cO-l8A" id="8dx-fv-KFh"/>
+                        <outlet property="tableView" destination="zd3-c7-1fv" id="Yg4-eN-fh1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXq-x0-d71" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
