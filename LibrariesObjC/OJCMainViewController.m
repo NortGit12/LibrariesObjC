@@ -14,8 +14,8 @@
 @interface OJCMainViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 // Outlets
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) OJCSearchController *searchController;
 
@@ -85,12 +85,13 @@
         
         // Where are we going?
         
-        OJCLibraryDetailViewController *detailViewController = [[OJCLibraryDetailViewController alloc] init];
+        OJCLibraryDetailViewController *detailViewController = [segue destinationViewController];
         
         // Have we packed?
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         OJCLibrary *library = self.searchController.searchResults[indexPath.row];
         detailViewController.library = library;
+        NSLog(@"Check dVC's library");
     }
 }
 

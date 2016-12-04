@@ -186,6 +186,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="Os0-mi-huJ"/>
+                    <connections>
+                        <outlet property="homepageLabel" destination="Ijx-a0-Czi" id="eos-64-7na"/>
+                        <outlet property="languageLabel" destination="qFm-lM-ITu" id="a22-zO-9FG"/>
+                        <outlet property="numberOfStarsLabel" destination="LVR-ON-obd" id="q0G-57-7Mz"/>
+                        <outlet property="summaryLabel" destination="v0X-h7-D7U" id="dyk-Bw-X7R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAq-Tj-cRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

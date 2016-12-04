@@ -12,10 +12,10 @@
 @interface OJCLibraryDetailViewController ()
 
 // Outlets
-@property (nonatomic, strong) UILabel *languageLabel;
-@property (nonatomic, strong) UILabel *numberOfStarsLabel;
-@property (nonatomic, strong) UILabel *homepageLabel;
-@property (nonatomic, strong) UILabel *summaryLabel;
+@property (nonatomic, weak) IBOutlet UILabel *languageLabel;
+@property (nonatomic, weak) IBOutlet UILabel *numberOfStarsLabel;
+@property (nonatomic, weak) IBOutlet UILabel *homepageLabel;
+@property (nonatomic, weak) IBOutlet UILabel *summaryLabel;
 
 @end
 
@@ -49,6 +49,8 @@
     
     if (!self.isViewLoaded) { return; }
     
+    [self.navigationItem setTitle:self.library.name];
+    
     NSDictionary *linkAttributes = @{NSLinkAttributeName : self.library.homepageURL};
     NSAttributedString *linkString = [[NSAttributedString alloc] initWithString:[self.library.homepageURL absoluteString] attributes:linkAttributes];
     self.homepageLabel.attributedText = linkString;
@@ -62,7 +64,6 @@
 }
 
 @end
-
 
 
 

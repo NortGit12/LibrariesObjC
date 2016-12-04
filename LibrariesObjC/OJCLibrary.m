@@ -40,8 +40,13 @@
 //        _language = dictionary[@"language"];
         _language = languageString;
         
-        
-        _name = dictionary[@"name"];
+        NSString *nameString = dictionary[@"name"];
+        if(!nameString || ![nameString isKindOfClass:[NSString class]]) {
+            
+            nameString = @"unknown";
+        }
+//        _name = dictionary[@"name"];
+        _name = nameString;
         
         NSString *numberOfStarsString = dictionary[@"stars"];
         if (!numberOfStarsString || ![numberOfStarsString isKindOfClass:[NSString class]]) {
@@ -54,10 +59,34 @@
         NSUInteger numberOfStars = (NSUInteger)numberOfStarsNumber;
         _numberOfStars = &numberOfStars;
         
-        _summary = dictionary[@"summary"];
+        NSString *summaryString = dictionary[@"description"];
+        if (!summaryString || ![summaryString isKindOfClass:[NSString class]]) {
+            
+            summaryString = @"unknown";
+        }
+//        _summary = dictionary[@"summary"];
+        _summary = summaryString;
     }
     
     return self;
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
